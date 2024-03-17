@@ -48,7 +48,7 @@ const Shop = () => {
             <Col md={4}>
               <SearchBar setFilterList={setFilterList} />
             </Col>
-            {user?.user.role === "admin" && (
+            {user?.user?.role === "admin" && (
               <Col md={4}>
                 <AddProduct />
               </Col>
