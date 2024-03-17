@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-const API_URL = "http://localhost:4000";
+const API_URL = "https://backend-e-commerce-9fdb.onrender.com";
 
 
 async function getAllProducts() {

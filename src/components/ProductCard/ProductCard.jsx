@@ -69,7 +69,7 @@ const ProductCard = ({ title, productItem }) => {
       <img
         loading="lazy"
         onClick={handleClick}
-        src={`http://localhost:4000/uploads/${productItem.imgUrl}`}
+        src={`https://backend-e-commerce-9fdb.onrender.com/uploads/${productItem.imgUrl}`}
         //  src={productItem.imgLink}
       />
       <div className="product-like">

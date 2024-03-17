@@ -47,7 +47,7 @@ const Cart = () => {
 
     try {
       if (user) {
-        await axios.post("http://localhost:4000/command", command);
+        await axios.post("https://backend-e-commerce-9fdb.onrender.com/command", command);
       } else {
         setMessage("Connectez-vous pour commander.");
       }
