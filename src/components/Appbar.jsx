@@ -162,27 +162,29 @@ export default function Appbar() {
           </span>
         </Link>
       </MenuItem>
-      <MenuItem style={{ backgroundColor: darkMode ? "#0f3460" : "#fff" }}>
-        <Link
-          aria-label="Go to Shop Page"
-          className="navbar-link"
-          to="/commands"
-        >
-          <IconButton
-            size="large"
-            aria-label="show 17 new notifications"
-            color="inherit"
+      {user && user.role === "admin" && (
+        <MenuItem style={{ backgroundColor: darkMode ? "#0f3460" : "#fff" }}>
+          <Link
+            aria-label="Go to Shop Page"
+            className="navbar-link"
+            to="/commands"
           >
-            <LocalMallIcon style={{ color: darkMode ? "#fff" : "#0f3460" }} />
-          </IconButton>
-          <span
-            style={{ color: darkMode ? "#fff" : "#0f3460" }}
-            className="nav-link-label"
-          >
-            Commands
-          </span>
-        </Link>
-      </MenuItem>
+            <IconButton
+              size="large"
+              aria-label="show 17 new notifications"
+              color="inherit"
+            >
+              <LocalMallIcon style={{ color: darkMode ? "#fff" : "#0f3460" }} />
+            </IconButton>
+            <span
+              style={{ color: darkMode ? "#fff" : "#0f3460" }}
+              className="nav-link-label"
+            >
+              Commands
+            </span>
+          </Link>
+        </MenuItem>
+      )}
       {user && user.role === "admin" && (
         <MenuItem style={{ backgroundColor: darkMode ? "#0f3460" : "#fff" }}>
           <Link
@@ -239,7 +241,7 @@ export default function Appbar() {
             onClick={() => dispatch(logout())}
           >
             <IconButton
-               title={`Connected As: ${connectedUser?.user?.name}`}
+              title={`Connected As: ${connectedUser?.user?.name}`}
               size="large"
               color="inherit"
             >
